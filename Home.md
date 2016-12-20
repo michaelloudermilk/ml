@@ -1,1 +1,3 @@
-Welcome to the UNMS wiki!
+[[ Installation & Update ]]  
+[[ Data backup ]]  
+[[ Uninstall guide ]]  
