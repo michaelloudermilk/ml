@@ -10,7 +10,7 @@ Welcome to the UNMS installation & update guide. UNMS can be deployed as a docke
 - ping allowed (see Devices latency)
 
 #### Install
-Run this command on the host to install docker (it pulls the latest UNMS image and start it). If an UNMS installation already exists, it will be updated to the latest version. When done the UNMS can be found at [http://localhost/](http://localhost/).
+Run this command on the host to install docker (it pulls the latest UNMS image and start it). If an UNMS installation already exists, it will be updated to the latest version. When done the UNMS can be found at [http://localhost/](http://localhost/). You can register your devices to UNMS with tutorial: [[Register devices to UNMS]].
 
     curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh
 
