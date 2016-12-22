@@ -17,7 +17,7 @@ Run this command on the host to install docker (it pulls the latest UNMS image a
 #### Cloud
 We recommend using the latest version of Ubuntu or Amazon AMI. Examples of suitable cloud services:
 - [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (1GB RAM) or bigger, Ubuntu
-- [DibgitalOcean](https://www.digitalocean.com), basic droplet (1GB RAM) or bigger, Ubuntu
+- [DigitalOcean](https://www.digitalocean.com), basic droplet (1GB RAM) or bigger, Ubuntu
 
 #### UNMS data
 By default, the installation script ensures that the application settings and data (logs, pictures, encryption key, etc.) will be stored outside the docker container (```/home/unms/data```). This will enable you to backup that data and more importantly, this will enable you to perform any future UNMS upgrades without any data loss.
