@@ -34,4 +34,4 @@
 ![Step5](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step5.png)
 * authorize your device in UNMS
 
-_Note: We are working on simpler registration process with UMobile application._
+_Note: We are working on simpler registration process with UMobile application and we will add support for discovery service._
