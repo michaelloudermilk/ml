@@ -1,3 +1,7 @@
-[[ Installation & Update ]]  
-[[ Data backup ]]  
-[[ Uninstall guide ]]  
+[[ Installation & Update ]]
+
+[[ Restart ]]
+
+[[ Data backup ]]
+
+[[ Uninstall guide ]]
