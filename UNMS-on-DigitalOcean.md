@@ -1,4 +1,4 @@
-This tutorial will explain how to deploy UNMS on a cloud server in a few simple steps. This tutorial uses DigitalOcean with estimated costs starting at $10/month. The usage is charged at an hourly rate, so if used to test just for an hour, the user will only be charged $0.015. Any other cloud server of the user's choice may be used as well.
+This tutorial will explain how to deploy UNMS on a cloud server in a few simple steps. This tutorial uses DigitalOcean with estimated costs starting at $10/month. The usage is charged at an hourly rate, so if you use DigitalOcean to test it just for an hour, the user will only be charged $0.015. Any other cloud server of the user's choice may be used as well.
 
 ## Step 1.
 **Create an account** on [DigitalOcean](https://www.digitalocean.com/).
