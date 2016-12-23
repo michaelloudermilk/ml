@@ -25,10 +25,10 @@ _Note: There is a detailed tutorial for DigitalOcean: **[[UNMS on DigitalOcean]]
 By default, the installation script ensures that the application settings and data (logs, pictures, encryption key, etc.) will be stored outside the docker container (```/home/unms/data```). This will enable you to back up that data, and more importantly, this will enable you to perform any future UNMS upgrades without any data loss.
 
 #### SSL Certificate
-By default, UNMS uses [Let's Encrypt](letsencrypt.org) to create an SSL certificate for its domain name. The certificate is saved under ```/home/unms/data/cert/live```. It's possible to replace the certificate with your own if required.
+By default, UNMS uses [Let's Encrypt](letsencrypt.org) to create an SSL certificate for its domain name. The certificate is saved under ```/home/unms/data/cert/live```. You can replace the certificate with your own if required to do so.
 
 #### Devices Latency
-By default, connected devices ping the UNMS host to check latency. This requires ping to be allowed on the UNMS host to work.
+By default, connected devices ping the UNMS host to check latency. This requires ping to be allowed on the UNMS host for UNMS to work.
 
 ## Windows, OS X
 
