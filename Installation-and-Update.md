@@ -28,7 +28,7 @@ By default, the installation script ensures that the application settings and da
 By default, UNMS uses [Let's Encrypt](letsencrypt.org) to create an SSL certificate for its domain name. The certificate is saved under ```/home/unms/data/cert/live```. You can replace the certificate with your own if required to do so.
 
 #### Devices Latency
-By default, connected devices ping the UNMS host to check latency. This requires ping to be allowed on the UNMS host for UNMS to work.
+By default, connected devices ping the UNMS host to check latency. Ping must be allowed on the UNMS host for UNMS to work.
 
 ## Windows, OS X
 
