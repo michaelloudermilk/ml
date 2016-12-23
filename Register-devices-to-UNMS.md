@@ -8,30 +8,30 @@
 #### U Fiber
 * OLT: [Firmware v0.1.3alpha]()
 
-## HOWTO register EdgeRouter to UNMS
+## How to Register EdgeRouter on UNMS
 
 ### Step 1
 ![Step1](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step1.png)
-* open UNMS and go to devices section
-* click to "ADD DEVICE" button
+* Open UNMS and go to the devices section.
+* Click the **ADD DEVICE** button.
 
 ### Step 2
 ![Step2](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step2.png)
-* copy UNMS connection string (there is the same UNMS connection string for all devices)
+* Copy the UNMS connection string (it is the same UNMS connection string for all devices).
 
 ### Step 3
 ![Step3](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step3.png)
-* open your device administration page
-* go to the system section
-* paste the UNMS connection string
-* enable UNMS connection
+* Open your device's administration page.
+* Go to the system section.
+* Paste the UNMS connection string.
+* Enable the UNMS connection.
 
 ### Step 4
 ![Step4](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step4.png)
-* save device configuration
+* Save the device configuration.
 
 ### Step 5
 ![Step5](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step5.png)
-* authorize your device in UNMS
+* Authorize your device in UNMS.
 
-_Note: We are working on simpler registration process with UMobile application and we will add support for discovery service._
+_Note: We are working on a simpler registration process with the U Mobile application and we will add support for the discovery service._
