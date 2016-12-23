@@ -8,7 +8,7 @@
 #### U Fiber
 * OLT: [Firmware v0.1.3alpha]()
 
-## How to Register EdgeRouter on UNMS
+## How to Register the EdgeRouter to UNMS
 
 ### Step 1
 ![Step1](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step1.png)
@@ -34,4 +34,4 @@
 ![Step5](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step5.png)
 * Authorize your device in UNMS.
 
-_Note: We are working on a simpler registration process with the U Mobile application and we will add support for the discovery service._
+_Note: We are working on a simpler registration process with the U Mobile application, and we will add support for the discovery service._
