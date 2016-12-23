@@ -6,7 +6,7 @@ UNMS data is stored in ```/home/unms/data``` - settings, logs, statistics, image
 Note that backing up/migrating the databases can be done from within the UNMS app; this may be easier for most users. See Settings > Maintenance > Backup. Using this tool you can back up and restore the database instead of moving the ```/home/unms/data``` folder.
 
 ### How to Back Up the UNMS Data Folder
-For data backup, you must first pause the running containers. Go to directory, where your docker-compose.yml is located (probably `/home/unms`). Then archive the data and save it somewhere safe. As the final step, unpause the containers.
+For data backup, you must first pause the running containers. Go to the directory, where your docker-compose.yml is located (probably `/home/unms`). Then archive the data and save it somewhere safe. As the final step, unpause the containers.
 
     # go to your UNMS home directory
     cd /home/unms
