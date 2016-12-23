@@ -8,7 +8,7 @@ Click **Create a New Droplet**.
 Choose **Ubuntu 16.04.1** as the image.
 ![Step1](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/DigitalOcean/step1.png)
 ## Step 4.
-**Choose your plan.** The $10/mo size is recommended. You can always change your plan in the future if you realize the server load is too high. You will be charged per hour, so you can try any plan for a while without incurring any high costs.
+**Choose your plan.** The $10/mo size is recommended. You can always change your plan in the future if you realize the server load is too high. You will be charged at an hourly rate, so you can try any plan for a while without incurring any high costs.
 ![Step2](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/DigitalOcean/step2.png)
 ## Step 5.
 **Choose a datacenter** close to your location.
