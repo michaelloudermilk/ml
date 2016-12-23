@@ -15,14 +15,14 @@ Run this command on the host to install docker (it pulls the latest UNMS image a
     curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh
 
 #### Cloud
-We recommend using the latest version of Ubuntu or Amazon AMI. Examples of suitable cloud services:
+We recommend using the latest version of Ubuntu or Amazon AMI. Here are examples of suitable cloud services:
 - [DigitalOcean](https://www.digitalocean.com), basic droplet (1GB RAM) or bigger, Ubuntu
 - [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (1GB RAM) or bigger, Ubuntu
 
 _Note: There is a detailed tutorial for DigitalOcean: **[[UNMS on DigitalOcean]]**._
 
-#### UNMS data
-By default, the installation script ensures that the application settings and data (logs, pictures, encryption key, etc.) will be stored outside the docker container (```/home/unms/data```). This will enable you to back up that data, and more importantly, this will enable you to perform any future UNMS upgrades without any data loss.
+#### UNMS Data
+By default, the installation script ensures that the application settings and data (logs, pictures, encryption key, etc.) will be stored outside of the docker container (```/home/unms/data```). This will enable you to back up that data, and more importantly, this will enable you to perform any future UNMS upgrades without any data loss.
 
 #### SSL Certificate
 By default, UNMS uses [Let's Encrypt](letsencrypt.org) to create an SSL certificate for its domain name. The certificate is saved under ```/home/unms/data/cert/live```. You can replace the certificate with your own if required to do so.
