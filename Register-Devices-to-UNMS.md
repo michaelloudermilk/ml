@@ -12,7 +12,7 @@
 
 ### Step 1
 ![Step1](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step1.png)
-* Open UNMS and go to the _devices_ section.
+* Open UNMS and go to the _Devices_ section.
 * Click the **ADD DEVICE** button.
 
 ### Step 2
@@ -22,7 +22,7 @@
 ### Step 3
 ![Step3](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/register/step3.png)
 * Open your device's administration page.
-* Go to the _system_ section.
+* Go to the _System_ section.
 * Paste the UNMS connection string.
 * Enable the UNMS connection.
 
