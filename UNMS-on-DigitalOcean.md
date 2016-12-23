@@ -24,12 +24,12 @@ runcmd:
 - curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh
 - sudo bash /tmp/unms_install.sh > /tmp/unms_install_output
 ```    
-## Step 8.
+## Step 8
 Optionally, you can **add your SSH key**. This will allow you to connect to the server without using a password. Otherwise, your root password will be sent to the email associated with your DigitalOcean account.
-## Step 9.
+## Step 9
 Click **Create**. 
-## Step 10.
+## Step 10
 Get a coffee and wait for about 30 seconds for the server to start up, and then wait another 4-8 minutes to download and deploy UNMS on the server. You should see this:
 ![Step5](https://github.com/Ubiquiti-App/UNMS/blob/master/doc/DigitalOcean/step5.png)
-## Step 11.
+## Step 11
 Then go to _http://your_server_ip_ (_"your_server_ip"_ is the IP of your Droplet).
