@@ -1,4 +1,4 @@
-## Supported FW
+## Supported Firmware Versions
 
 #### EdgeRouter
 * ER-X/ER-X-SFP/EP-R6: [Firmware v1.9.2alpha]()
