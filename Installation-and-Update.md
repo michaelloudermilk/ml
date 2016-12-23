@@ -16,8 +16,8 @@ Run this command on the host to install docker (it pulls the latest UNMS image a
 
 #### Cloud
 We recommend using the latest version of Ubuntu or Amazon AMI. Here are examples of suitable cloud services:
-- [DigitalOcean](https://www.digitalocean.com), basic droplet (1GB RAM) or bigger, Ubuntu
-- [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (1GB RAM) or bigger, Ubuntu
+- [DigitalOcean](https://www.digitalocean.com), basic droplet (1 GB RAM) or bigger, Ubuntu
+- [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (1 GB RAM) or bigger, Ubuntu
 
 _Note: There is a detailed tutorial for DigitalOcean: **[[UNMS on DigitalOcean]]**._
 
