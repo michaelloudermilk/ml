@@ -1,6 +1,6 @@
 This command will uninstall the UNMS docker image and containers.
 
-Run this command as user with enabled `sudo`, in the location of `docker-compose.yml` file (probably ```/home/unms```).
+Run this command as user with enabled `sudo`, in the location of the `docker-compose.yml` file (probably ```/home/unms```).
 
     curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/uninstall.sh | sudo sh
 
