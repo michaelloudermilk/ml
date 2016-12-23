@@ -1,4 +1,4 @@
-Welcome to the UNMS installation & update guide. UNMS can be deployed as a docker image on your own server. Please choose your system and follow the instructions to install a fresh copy or update an existing installation.
+Welcome to the UNMS installation and update guide. UNMS can be deployed as a docker image on your own server. Please choose your system and follow the instructions to install a fresh copy or update an existing installation.
 
 ## Linux
 
