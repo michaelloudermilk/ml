@@ -1,5 +1,7 @@
 ## Supported Firmware Versions
 
+_**Note: available from second week of January 2017**_
+
 #### EdgeRouter
 * ER-X/ER-X-SFP/EP-R6: [Firmware v1.9.2alpha]()
 * ER-8/ERPro-8/EP-R8: [Firmware v1.9.2alpha]()
