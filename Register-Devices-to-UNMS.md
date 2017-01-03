@@ -8,7 +8,7 @@ _**Note: available from second week of January 2017**_
 * ERLite-3/ERPoe-5: [Firmware v1.9.2alpha]()
 
 #### U Fiber
-* UF-OLT: [Firmware v0.1.3alpha]()
+* UF-OLT: [Firmware v0.2.5alpha]()
 
 ## How to Register the EdgeRouter to UNMS
 
