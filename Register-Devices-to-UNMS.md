@@ -1,14 +1,14 @@
 ## Supported Firmware Versions
 
-_**Note: available from second week of January 2017**_
+_**Note: alpha FWs are available on personal request. **_
 
 #### EdgeRouter
-* ER-X/ER-X-SFP/EP-R6: [Firmware v1.9.2alpha]()
-* ER-8/ERPro-8/EP-R8: [Firmware v1.9.2alpha]()
-* ERLite-3/ERPoe-5: [Firmware v1.9.2alpha]()
+* ER-X/ER-X-SFP/EP-R6: Firmware v1.9.2alpha
+* ER-8/ERPro-8/EP-R8: Firmware v1.9.2alpha
+* ERLite-3/ERPoe-5: Firmware v1.9.2alpha
 
 #### U Fiber
-* UF-OLT: [Firmware v0.2.5alpha]()
+* UF-OLT: Firmware v0.2.6alpha
 
 ## How to Register the EdgeRouter to UNMS
 
