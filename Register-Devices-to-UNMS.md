@@ -1,6 +1,6 @@
 ## Supported Firmware Versions
 
-_**Note: alpha FWs are available on personal request. **_
+_**Note: alpha FWs are available on personal request.**_
 
 #### EdgeRouter
 * ER-X/ER-X-SFP/EP-R6: Firmware v1.9.2alpha
