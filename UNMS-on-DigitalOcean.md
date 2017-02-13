@@ -24,6 +24,8 @@ runcmd:
 - curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh
 - sudo bash /tmp/unms_install.sh > /tmp/unms_install_output
 ```    
+Optionally, you can include additional arguments if you wish to [run UNMS on non-standard ports](Installation-%26-Update#ports), [use a reverse proxy server](Installation-%26-Update#rproxy), or [use custom SSL certificate](Installation-%26-Update#ssl).
+
 ## Step 8
 Optionally, you can **add your SSH key**. This will allow you to connect to the server without using a password. Otherwise, your root password will be sent to the email associated with your DigitalOcean account.
 ## Step 9
