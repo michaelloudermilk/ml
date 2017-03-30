@@ -6,6 +6,7 @@ Welcome to the UNMS installation and update guide. UNMS can be deployed as a doc
 - Supported Distros: [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) 64-bit and [Debian 8](https://www.debian.org/releases/stable/) 64-bit
 - 1 GB RAM (Minimal)
 - 8 GB storage (Minimal)
+- 64-bit (x64) CPU
 - Local Ports: 80 and 443
 - Allow ping (see Devices Latency and Outage Statistics)
 - bash, curl
