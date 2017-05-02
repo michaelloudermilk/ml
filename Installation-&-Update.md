@@ -2,18 +2,6 @@ Welcome to the UNMS installation and update guide. UNMS can be deployed as a doc
 
 ## Linux
 
-#### Update Instructions
-
-Starting with UNMS version 0.7.14, we have introduced a one-click update option in the UI. When a new version is available, you will be able to install the update by clicking a button in the new version notification dialog or under Settings/Maintenance.
-
----
-Run this command on the host to reinstall/update to the latest version manually:
-```sh
-$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --update
-```
-
-Updating the app will preserve all configuration (custom ports, SSL certificates, etc.). If you wish to change those settings, please follow the <a href="#installation-instructions">Installation Instructions</a> and specify all settings again. 
-
 #### Prerequisites
 - Supported Distros: [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) 64-bit and [Debian 8](https://www.debian.org/releases/stable/) 64-bit
 - 1 GB RAM (Minimal)
@@ -23,12 +11,23 @@ Updating the app will preserve all configuration (custom ports, SSL certificates
 - Allow ping (see Devices Latency and Outage Statistics)
 - bash, curl
 
-#### Installation Instructions
+#### <a name="installation"></a> Installation Instructions
 Run the command below on the host to install and start UNMS (it will automatically install Docker if it is not installed already). If a UNMS installation already exists, it will be overwritten, but keep all data. When the process is complete, you can access UNMS at [http://localhost/](http://localhost/). You can register your devices to UNMS using this tutorial: [[Register Devices to UNMS]].
 
 ```sh
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh
 ```
+
+#### <a name="update"></a> Manual update Instructions (optional)
+
+Starting with UNMS version 0.7.14, we have introduced a one-click update option in the UI. When a new version is available, you will be able to install the update by clicking a button in the new version notification dialog or under Settings/Maintenance.
+
+Run this command on the host to reinstall/update to the latest version manually:
+```sh
+$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --update
+```
+
+Updating the app will preserve all configuration (custom ports, SSL certificates, etc.). If you wish to change those settings, please follow the <a href="#installation-instructions">Installation Instructions</a> and specify all settings again. 
 
 #### <a name="ssl"></a> Managing the SSL certificate for access via HTTPS (optional)
 By default, UNMS uses [Let's Encrypt](https://letsencrypt.org/) to automatically create and manage an SSL certificate for its domain name. The certificate is saved under ```/home/unms/data/cert/live```. 
