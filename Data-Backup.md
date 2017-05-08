@@ -1,6 +1,6 @@
 This guide explains how to back up UNMS manually or how to migrate UNMS to another machine.
 
-UNMS data is stored in ```/home/unms/data``` - settings, logs, statistics, images, backups, and SSL certificates.
+UNMS data is stored in ```/home/unms/data``` on the Docker host - settings, logs, statistics, images, backups, and SSL certificates.
 
 ### Database Backup - Settings, Logs, and Statistics
 Note that backing up/migrating the databases can be done from within the UNMS app; this may be easier for most users. See Settings > Maintenance > Backup. Using this tool you can back up and restore the database instead of moving the ```/home/unms/data``` folder.
