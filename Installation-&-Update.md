@@ -50,8 +50,22 @@ $ sudo bash /tmp/unms_install.sh --http-port 8080 --https-port 8443
 
 Please be aware that UNMS must be accessible from the internet via HTTP port 80 if you want to use [automatic SSL certificate management](#ssl) via Let's Encrypt.
 
+#### <a name="ws-port"></a> Changing the device inform port (optional)
+*Inform port is the port that your devices use to connect to UNMS.*
+
+Using a separate inform port is useful when you need to expose the port outside your private network, but don't want to expose the UNMS GUI.
+
+Use installation script argument `--ws-port <NUMBER>` to configure the UNMS WebSocket server to use a separate port for communication with your devices. 
+
+```sh
+$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh 
+$ sudo bash /tmp/unms_install.sh --ws-port 8444
+```
+
 #### <a name="rproxy"></a> Running UNMS behind a reverse proxy (optional)
-Use installation script arguments `--behind-reverse-proxy` and `--public-https-port <NUMBER>` if you plan to run UNMS behind a reverse proxy server. Setting `--public-https-port` is only necessary if the proxy listens for HTTPS on a different port than UNMS.
+Use installation script arguments `--behind-reverse-proxy`, `--public-https-port <NUMBER>` and `--public-ws-port <NUMBER>` if you plan to run UNMS behind a reverse proxy server. 
+Setting `--public-https-port` is only necessary if the proxy listens for HTTPS on a different port than UNMS.
+Setting `--public-ws-port` is only necessary when you use <a href="#ws-port">`--ws-port`</a> to separate the inform port form the HTTPS port.
 
 ```sh
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh
