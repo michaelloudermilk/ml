@@ -1,14 +1,10 @@
 ## Supported Firmware Versions
 
-_**Note: FW is available in [UNMS Community](https://community.ubnt.com/t5/UNMS-Next-Generation-Network/UNMS-Compatible-EdgeOS-Firmware/m-p/1810799/thread-id/21)**_
-
-#### EdgeRouter
-* ER-X/ER-X-SFP/EP-R6: Firmware v1.9.2alpha1
-* ER-8/ERPro-8/EP-R8: Firmware v1.9.2alpha1
-* ERLite-3/ERPoe-5: Firmware v1.9.2alpha1
-
-#### U Fiber
-* UF-OLT: Firmware v0.2.6alpha
+* **EdgeRouter (e50, e100, e200)**: _v1.9.1.1-unms_ or _1.9.7+_
+* **EdgeRouter (e1000)**: _1.9.5_ or _1.9.7+_
+* **uFiber OLT (e600)**: _1.0.0+_
+* **airMAX (AC)**: _8.3.0+_
+* **airMAX (M)**: _6.0.6+_ (alpha)
 
 ## How to Register the EdgeRouter to UNMS
 
