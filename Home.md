@@ -6,6 +6,8 @@
 
 [[ Register devices to UNMS ]]
 
+[[Discovery Troubleshooting]]
+
 [[ Restart ]]
 
 [[ Data backup ]]
