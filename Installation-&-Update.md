@@ -4,8 +4,8 @@ Welcome to the UNMS installation and update guide. UNMS can be deployed as a doc
 
 #### Prerequisites
 - Supported Distros: [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) 64-bit and [Debian 8](https://www.debian.org/releases/stable/) 64-bit
-- 1 GB RAM (Minimal)
-- 8 GB storage (Minimal)
+- 2 GB RAM (Minimal)
+- 16 GB storage (Minimal)
 - 64-bit (x64) CPU
 - Local Ports: 80 and 443
 - Allow ping (see Devices Latency and Outage Statistics)
@@ -84,8 +84,8 @@ $ sudo bash /tmp/unms_install.sh --subnet 172.45.0.1/24
 
 #### Cloud
 We recommend using the latest version of [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) or Amazon AMI. Here are examples of suitable cloud services:
-- [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (1 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
-- [DigitalOcean](https://www.digitalocean.com), basic droplet (1 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
+- [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
+- [DigitalOcean](https://www.digitalocean.com), basic droplet (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
 
 _Note: There is a detailed tutorial for DigitalOcean: **[[UNMS on DigitalOcean]]**._
 
