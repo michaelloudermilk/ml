@@ -2,11 +2,14 @@
 
 **This guide is very preliminary and has had minimal testing. Use at your own risk.**
 
-This guide is intended only for those who need to install UNMS on a system that runs Docker, but is NOT able to run the official installation scripts. Most users should follow instructions at [[ Installation-&-Update ]].
+This guide is intended only for those who need to install UNMS on a system that runs Docker, but CANNOT run the official installation scripts. Most users should follow instructions at [[ Installation-&-Update ]].
 
 This installation guide references tools like `useradd`, `usermod`, `curl` and `envsubst`. You may need to substitute alternative tools available on your system.
 
 All commands must be executed as `root`.
+
+## UNMS Version:
+This guide was tested with UNMS 0.8.0. The procedure will likely not work with other releases.
 
 ## Prerequisites:
 - Docker Engine 1.10.0 or later
@@ -24,7 +27,7 @@ All commands must be executed as `root`.
 
 0) Download and unpack the UNMS installation package to `/home/${UNMS_USER}/app`
     ```
-    UNMS_VERSION=0.7.16
+    UNMS_VERSION=0.8.0
 
     mkdir /home/${UNMS_USER}/app
     cd /home/${UNMS_USER}/app
@@ -37,15 +40,21 @@ All commands must be executed as `root`.
     export USER_ID=$(id -u ${UNMS_USER})     # UID of the UNMS user account
     export HTTP_PORT=80                      # HTTP port for UNMS
     export HTTPS_PORT=443                    # HTTPS port for UNMS
-    export PUBLIC_HTTPS_PORT=443             # Port where UNMS is exposed to users
+    export PUBLIC_HTTPS_PORT=443             # Port where UNMS UI is exposed to users
+    export PUBLIC_WS_PORT=443                # Port where UNMS is exposed to devices
     export BEHIND_REVERSE_PROXY=false        # true if running behind a reverse proxy
     export SSL_CERT=                         # SSL cert filename (optional)
     export SSL_CERT_KEY=                     # SSL cert key filename (optional)
     export SSL_CERT_CA=                      # SSL cert CA filename (optional)
+    export INTERNAL_HTTP_PORT=8080
+    export INTERNAL_HTTPS_PORT=8443
+    export INTERNAL_WS_PORT=8443
+    export WS_PORT_MAPPING=
     export DOCKER_IMAGE=ubnt/unms
     export BRANCH=master
     export CONFIG_DIR=/home/${UNMS_USER}/app/conf
     export DATA_DIR=/home/${UNMS_USER}/data
+    export CERT_DIR_MAPPING=
     export PROD=true
     export DEMO=false
     export HOST_TAG=
@@ -59,29 +68,9 @@ All commands must be executed as `root`.
     DATA_DIR="/home/${UNMS_USER}/data"
 
     mkdir "${DATA_DIR}"
-    mkdir "${DATA_DIR}/config-backups"
-    mkdir "${DATA_DIR}/images"
-    mkdir "${DATA_DIR}/firmwares"
-    mkdir "${DATA_DIR}/firmwares/manual"
-    mkdir "${DATA_DIR}/firmwares/ubnt"
-    mkdir "${DATA_DIR}/import"
-    mkdir "${DATA_DIR}/unms-backups"
-    mkdir "${DATA_DIR}/update"
-    mkdir "${DATA_DIR}/redis"
-    mkdir "${DATA_DIR}/logs"
-    mkdir "${DATA_DIR}/postgres"
-    ````
-
-0) Create or link a volume for SSL certificates
-    
-    To let UNMS register a certificate automatically:
-    ```
     mkdir "${DATA_DIR}/cert"
-    ```
-    or, to supply UNMS with an existing certificate:
-    ```
-    ln -sT "/my-certificates" "${DATA_DIR}/cert"
-    ```
+    mkdir "${DATA_DIR}/redis"
+    ````
 
 0) Set file ownership and permissions
     ```
@@ -92,7 +81,7 @@ All commands must be executed as `root`.
 0) Run Docker Compose
     ```
     cd /home/${UNMS_USER}/app;
-    /usr/local/bin/docker-compose up -d
+    /usr/local/bin/docker-compose -p unms up -d
     ```
 
 0) Verify that UNMS is up and running
