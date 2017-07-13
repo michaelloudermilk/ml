@@ -74,14 +74,6 @@ $ sudo bash /tmp/unms_install.sh --behind-reverse-proxy --public-https-port 443 
 
 Please be aware that this puts the responsibility of managing an SSL certificate on the reverse proxy and disables the automatic certificate management via Let's Encrypt. The reverse proxy must still use HTTPS for communication with UNMS, optionally with a [custom SSL certificate](#ssl). HTTP-only comunication between UNMS and the reverse proxy is not supported.
 
-#### <a name="subnet"></a> Changing the UNMS container's IP address (optional)
-Use installation script argument `--subnet <CIDR>` to change the UNMS container's subnet in case you experience IP address conflicts.
-
-```sh
-$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh 
-$ sudo bash /tmp/unms_install.sh --subnet 172.45.0.1/24
-```
-
 #### Cloud
 We recommend using the latest version of [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) or Amazon AMI. Here are examples of suitable cloud services:
 - [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
