@@ -57,11 +57,11 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
 
     UNMS currently (2017-06-27, version 0.8.0) supports:
 
-    * **EdgeRouter (e50, e100, e200)**
-    * **EdgeRouter (e1000)**
-    * **uFiber OLT (e600)**
-    * **airMAX (AC)**
-    * **airMAX (M)**
+    * **EdgeRouter (e50, e100, e200) - FW 1.9.1.1-unms, FW 1.9.7+**
+    * **EdgeRouter (e1000) - FW 1.9.5+**
+    * **uFiber OLT (e600) - FW 1.0.0+**
+    * **airMAX (AC) - FW 8.3+**
+    * **airMAX (M) - FW 6.0.6-alpha-unms, FW 6.0.7+**
 
 ## I can discover the device but connection to UNMS is failing
 
