@@ -9,7 +9,7 @@ Welcome to the UNMS installation and update guide. UNMS can be deployed as a doc
 - 64-bit (x64) CPU
 - Local Ports: 80 and 443
 - Allow ping (see Devices Latency and Outage Statistics)
-- bash, curl
+- [bash, curl, sudo](#-installing-prerequisites)
 
 #### <a name="installation"></a> Installation Instructions
 Run the command below on the host to install and start UNMS (it will automatically install Docker if it is not installed already). If a UNMS installation already exists, it will be overwritten, but keep all data. When the process is complete, you can access UNMS at [http://server_hostname_or_ip/](http://server_hostname_or_ip/). Please don't use localhost. Use server hostname or it's IP address. You can register your devices to UNMS using this tutorial: [[Register Devices to UNMS]].
@@ -74,6 +74,14 @@ $ sudo bash /tmp/unms_install.sh --behind-reverse-proxy --public-https-port 443 
 
 Please be aware that this puts the responsibility of managing an SSL certificate on the reverse proxy and disables the automatic certificate management via Let's Encrypt. The reverse proxy must still use HTTPS for communication with UNMS, optionally with a [custom SSL certificate](#ssl). HTTP-only comunication between UNMS and the reverse proxy is not supported.
 
+#### <a name="subnet"></a> Changing the UNMS container's IP address (optional)
+Use installation script argument `--subnet <CIDR>` to change the UNMS container's subnet in case you experience IP address conflicts.
+
+```sh
+$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh 
+$ sudo bash /tmp/unms_install.sh --subnet 172.45.0.1/24
+```
+
 #### Cloud
 We recommend using the latest version of [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) or Amazon AMI. Here are examples of suitable cloud services:
 - [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
@@ -87,6 +95,14 @@ By default, the installation script ensures that the application settings and da
 #### Devices Latency and Outage Statistics
 By default, all connected devices to UNMS will ping the UNMS host to check for latency and if any devices are being reported as offline which will result in outage statistics being generated.
 Ping must be allowed to the UNMS Host for this to properly work.
+
+### <a name="prerequisites"></a> Installing prerequisites
+Run the following command on your Ubuntu or Debian system to ensure that all required tools are installed:
+```
+sudo apt-get update
+sudo apt-get install curl sudo bash netcat
+```
+
 
 ## Windows, OS X
 
