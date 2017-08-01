@@ -1,4 +1,4 @@
-# Issue with device connection to UNMS - AES encryption
+# Issue with device connection to UNMS (AES encryption)
 
 Typical example:
 
