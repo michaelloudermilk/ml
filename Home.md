@@ -6,9 +6,9 @@
 
 [[ Register devices to UNMS ]]
 
-[[ Device log Troubleshooting]]
+[[ Device log Troubleshooting ]]
 
-[[ Discovery Troubleshooting] ]
+[[ Discovery Troubleshooting ]]
 
 [[ Restart ]]
 
