@@ -53,3 +53,9 @@ Typical example:
     udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
     
 Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port.
+
+# UNMS terminates device connection
+
+Typical example:
+
+    dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
