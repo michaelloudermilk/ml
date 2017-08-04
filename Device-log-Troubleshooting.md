@@ -50,7 +50,7 @@ Devices with communication protocol V2 (EdgeRouter 1.9.7.betaX+, airMAX 8.4+):
 
 Typical example:
 
-    udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
+     Jul 29 11:24:11 udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
     
 Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port.
 
@@ -58,4 +58,4 @@ Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocke
 
 Typical example:
 
-    dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
+    Jul 28 22:26:41 dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
