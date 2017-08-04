@@ -1,4 +1,4 @@
-# Issue with device connection to UNMS (AES encryption)
+# Problem with AES encryption
 
 Typical example:
 
@@ -18,7 +18,7 @@ Shorter solutions with possible disadvantage:
 * Use UMobile discovery or UNMS Discovery which fix AES key when you connect your device with it but they have to have access to your device. It's not possible for example with cloud UNMS.
 
 ### How to remove device MAC address from Postgres:
-List all MAC addresses or skip this step if you know it:
+You will find MAC address only for devices with V2 communication protocol ( EdgeRouter 1.9.7.alphaX+, airMAX 8.4+ ). You can list all MAC addresses or skip this step if you know it:
 
     sudo docker exec -u postgres -it unms-postgres psql
     \c unms
@@ -31,3 +31,11 @@ Choose you device MAC address and replace it in following script:
     \c unms
     delete from mac_aes_key where mac='44:d9:e7:50:92:89';
     \q
+
+# Problem with a custom reverse proxy
+
+Typical example:
+
+    udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
+    
+TODO
