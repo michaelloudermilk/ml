@@ -47,7 +47,7 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
     ```
     cd /home/unms/app
     docker-compose -p unms down
-    docker network create unms_default --subnet 173.30.0.1/24
+    docker network create unms_default --subnet 172.30.0.1/24
     docker-compose -p unms up -d
     ```
 
