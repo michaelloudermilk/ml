@@ -25,7 +25,9 @@ You will find MAC address only for devices with V2 communication protocol ( Edge
     select * from mac_aes_key;
     \q
 
-Choose you device MAC address and replace it in following script:
+1. Stop UNMS to ensure we clear it from memory as well.
+
+2. Choose you device MAC address and replace it in following script:
 
     sudo docker exec -u postgres -it unms-postgres psql
     \c unms
