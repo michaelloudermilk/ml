@@ -19,21 +19,21 @@ Shorter solutions with possible disadvantages:
 
 ### How to remove device MAC address from Postgres:
 You will find MAC address only for devices with V2 communication protocol ( EdgeRouter 1.9.7.betaX+, airMAX 8.4+ ). You can list all MAC addresses or skip this step if you know it:
-
-    `sudo docker exec -u postgres -it unms-postgres psql`
-    `\c unms`
-    `select * from mac_aes_key;`
-    `\q`
-
+```
+    sudo docker exec -u postgres -it unms-postgres psql
+    \c unms
+    select * from mac_aes_key;
+    \q
+```
 1. Stop UNMS to ensure we clear it from memory as well.
 
 2. Choose you device MAC address and replace it in following script:
-
-    `sudo docker exec -u postgres -it unms-postgres psql`
-    `\c unms`
-    `delete from mac_aes_key where mac='44:d9:e7:50:92:89';`
-    `\q`
-
+```
+    sudo docker exec -u postgres -it unms-postgres psql
+    \c unms
+    delete from mac_aes_key where mac='44:d9:e7:50:92:89';
+    \q
+```
 ### How UNMS keys aka UNMS connection strings works
 
 Devices with communication protocol V1 (EdgeRouter 1.9.1.1-unms up to 1.9.7alphaX, airMAX 8.3.0):
