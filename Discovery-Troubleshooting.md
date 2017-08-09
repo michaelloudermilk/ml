@@ -104,4 +104,4 @@ Different devices store logs differently
 
 Logs are stored in `/home/unms/data/logs/` or you can download logs from Web UI from **Settings** -> **Maintenance** -> **Download support info**
 
-You can use a script to generate a package with the latest logs and additional info required to troubleshoot UNMS issues, see [[Generating-a-support-info-file-via-CLI]]
+You can use a script to generate a package with the latest logs and additional info required to troubleshoot UNMS issues, see [[Generating a support info file via CLI]]
