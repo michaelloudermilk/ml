@@ -74,6 +74,8 @@ $ sudo bash /tmp/unms_install.sh --behind-reverse-proxy --public-https-port 443 
 
 Please be aware that this puts the responsibility of managing an SSL certificate on the reverse proxy and disables the automatic certificate management via Let's Encrypt. The reverse proxy must still use HTTPS for communication with UNMS, optionally with a [custom SSL certificate](#ssl). HTTP-only comunication between UNMS and the reverse proxy is not supported.
 
+[[Nginx reverse proxy example]] shows a working reverse proxy configuration for Nginx.
+
 #### <a name="subnet"></a> Changing the UNMS container's IP address (optional)
 Use installation script argument `--subnet <CIDR>` to change the UNMS container's subnet in case you experience IP address conflicts.
 
