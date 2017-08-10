@@ -62,9 +62,9 @@ Typical example:
 
     Jul 28 22:26:41 dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
 
-This log lines means that UNMS can't connect this device. It could mean that its model or FW is not supported or there is a problem with parsing device info. If it happens, please contact us via [UNMS community](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/bd-p/UNMSBeta). We would like to know your device mode, FW version and [UNMS logs](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#where-to-find-unms-logs).
+This log lines mean that UNMS can't connect this device. It could mean that its model or FW is not supported or there is a problem with parsing device info. If it happens, please contact us via [UNMS community](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/bd-p/UNMSBeta). We would like to know your device mode, FW version and [UNMS logs](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#where-to-find-unms-logs).
 
-# UNMS connector can't access device data
+# UNMS connector can't access local device data
 
 Typical example:
 
@@ -76,4 +76,13 @@ Typical example:
     2017-08-06 00:37:57 ERROR connect(): Connection refused
     2017-08-06 00:37:57 ERROR failed to initialize stats socket
 
-This error means that UNMS connector (udapi-bridge) can't access local device sockets and receive device statistics and read configuration. In this case, there should be more information in log file _/var/log/ubnt-daemon.log_ The second option how to get more information is to run udapi-bridge in verbose mode:
+These error log lines mean that UNMS connector (udapi-bridge) can't access local device sockets and receive device statistics and read configuration. In this case, there should be more information in log file _/var/log/ubnt-daemon.log_ Plus it's possible to get more information from udapi-bridge which is in verbose mode as well. 
+
+### Howto switch udapi-bridge to verbose mode.
+1. Disable UNMS connection in device UI.
+2. Copy UNMS key.
+3. Connect to device via SSH.
+4. Run udapi-bridge manually and check its output. Command:
+
+    sudo udapi-bridge -v UNMS-KEY
+
