@@ -76,4 +76,4 @@ Typical example:
     2017-08-06 00:37:57 ERROR connect(): Connection refused
     2017-08-06 00:37:57 ERROR failed to initialize stats socket
 
-TODO
+This error means that UNMS connector (udapi-bridge) can't access local device sockets and receive device statistics and read configuration. In this case, there should be more information in log file _/var/log/ubnt-daemon.log_ The second option how to get more information is to run udapi-bridge in verbose mode:
