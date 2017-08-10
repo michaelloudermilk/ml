@@ -13,7 +13,9 @@
     }
     
     server {
-      listen 80 default;
+      listen 80;
+      server_name unms.example.com;
+
       client_max_body_size 4G;
     
       location / {
