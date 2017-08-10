@@ -25,9 +25,10 @@ sudo docker exec -u postgres -it unms-postgres psql
 select * from mac_aes_key;
 \q
 ```
-1. Stop UNMS to ensure we clear it from memory as well.
 
+1. Stop UNMS to ensure we clear it from memory as well.
 2. Choose you device MAC address and replace it in following script:
+
 ```
 sudo docker exec -u postgres -it unms-postgres psql
 \c unms
@@ -79,10 +80,12 @@ Typical example:
 These error log lines mean that UNMS connector (udapi-bridge) can't access local device sockets and receive device statistics and read configuration. In this case, there should be more information in log file _/var/log/ubnt-daemon.log_ Plus it's possible to get more information from udapi-bridge which is in verbose mode as well. 
 
 ### Howto switch udapi-bridge to verbose mode.
-1. Disable UNMS connection in device UI.
-2. Copy UNMS key.
-3. Connect to device via SSH.
-4. Run udapi-bridge manually and check its output. Command:
+Steps:
+1. Disable UNMS connection in device UI 
+2. Copy UNMS key
+3. Connect to device via SSH
+4. Run udapi-bridge manually and check its output.
+
+Command:
 
     sudo udapi-bridge -v UNMS-KEY
-
