@@ -63,3 +63,17 @@ Typical example:
     Jul 28 22:26:41 dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
 
 This log lines means that UNMS can't connect this device. It could mean that its model or FW is not supported or there is a problem with parsing device info. If it happens, please contact us via [UNMS community](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/bd-p/UNMSBeta). We would like to know your device mode, FW version and [UNMS logs](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#where-to-find-unms-logs).
+
+# UNMS connector can't access device data
+
+Typical example:
+
+    2017-08-06 00:37:55 ERROR recv(): socket closed
+    2017-08-06 00:37:55 ERROR failed to parse header
+    2017-08-06 00:37:55 ERROR failed to perform EdgeOS socket request
+    2017-08-06 00:37:55 ERROR connect(): Connection refused
+    2017-08-06 00:37:55 ERROR failed to initialize stats socket
+    2017-08-06 00:37:57 ERROR connect(): Connection refused
+    2017-08-06 00:37:57 ERROR failed to initialize stats socket
+
+TODO
