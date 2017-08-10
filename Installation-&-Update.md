@@ -84,6 +84,9 @@ $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.
 $ sudo bash /tmp/unms_install.sh --subnet 172.45.0.1/24
 ```
 
+You may also wish to change the IP address of the docker0 bridge created by Docker. See https://docs.docker.com/engine/userguide/networking/default_network/custom-docker0/.
+Please note that this may affect containers other than UNMS running on your system.
+
 #### Cloud
 We recommend using the latest version of [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) or Amazon AMI. Here are examples of suitable cloud services:
 - [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
