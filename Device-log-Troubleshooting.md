@@ -5,6 +5,8 @@ Typical example:
     2017-07-26 11:53:04 ERROR failed to decrypt AES-encrypted message
     2017-07-26 11:53:04 ERROR failed to decode message from UNMS
 
+**Important notice: There is an important bug-fix in UNMS 0.9.2 which decreases occurrence of this issue.**
+
 This error means that AES key in your device and in UNMS for this device mismatch. There could be several reasons. Longer but the most reliable solution:
 1. disable UNMS and remove UNMS key in your device UI
 2. click refresh button on your device in UNMS device list
@@ -55,7 +57,7 @@ Typical example:
 
      Jul 29 11:24:11 udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
     
-Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. There is recommended configuration for [Nginx](https://github.com/Ubiquiti-App/UNMS/wiki/Nginx-reverse-proxy-example)
+Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. There is a recommended configuration for [Nginx](https://github.com/Ubiquiti-App/UNMS/wiki/Nginx-reverse-proxy-example).
 
 # UNMS terminates device connection
 
