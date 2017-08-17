@@ -58,3 +58,37 @@
       }
     }
 
+## Apache config
+
+*change `ServerName`, `SSLCertificateFile` and `SSLCertificateKeyFile` to match your environment*
+
+    <VirtualHost *:80>
+      ProxyPreserveHost On
+      ProxyPass / http://127.0.0.1:8080/
+      ProxyPassReverse / http://127.0.0.1:8080/
+    </VirtualHost>
+    
+    <VirtualHost *:443>
+      ProxyRequests Off
+      ProxyPreserveHost On
+    
+      ServerName unms.example.com
+    
+      SSLEngine on
+      SSLCertificateFile /etc/letsencrypt/live/unms.example.com/fullchain.pem
+      SSLCertificateKeyFile /etc/letsencrypt/live/unms.example.com/privkey.pem
+    
+      SSLProxyEngine On
+      SSLProxyVerify none
+      SSLProxyCheckPeerCN off
+      SSLProxyCheckPeerExpire off
+      SSLProxyCheckPeerName off
+    
+      RewriteEngine on
+      RewriteCond %{HTTP:Connection} Upgrade [NC]
+      RewriteCond %{HTTP:Upgrade} websocket [NC]
+      RewriteRule /(.*) wss://127.0.0.1:8443/$1 [P,L]
+    
+      ProxyPass / https://127.0.0.1:8443/
+      ProxyPassReverse / https://127.0.0.1:8443/
+    </VirtualHost>
