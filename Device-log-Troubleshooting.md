@@ -57,7 +57,7 @@ Typical example:
 
      Jul 29 11:24:11 udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
     
-Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. There is a recommended configuration for [Nginx](https://github.com/Ubiquiti-App/UNMS/wiki/Nginx-reverse-proxy-example).
+Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. See our [example configurations](https://github.com/Ubiquiti-App/UNMS/wiki/Reverse-proxy-examples) for Nginx and Apache.
 
 # UNMS terminates device connection
 
