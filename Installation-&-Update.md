@@ -9,7 +9,7 @@ Welcome to the UNMS installation and update guide. UNMS can be deployed as a doc
 - 64-bit (x64) CPU
 - Local Ports: 80 and 443
 - Allow ping (see Devices Latency and Outage Statistics)
-- [bash, curl, sudo](#-installing-prerequisites)
+- [bash, curl, sudo, netcat](#-installing-prerequisites)
 
 #### <a name="installation"></a> Installation Instructions
 Run the command below on the host to install and start UNMS (it will automatically install Docker if it is not installed already). If a UNMS installation already exists, it will be overwritten, but keep all data. When the process is complete, you can access UNMS at [http://server_hostname_or_ip/](http://server_hostname_or_ip/). Please don't use localhost. Use server hostname or it's IP address. You can register your devices to UNMS using this tutorial: [[Register Devices to UNMS]].
