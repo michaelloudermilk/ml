@@ -18,22 +18,6 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
     ```
     ping 192.168.x.x
     traceroute -n 192.168.x.x
-    curl --insecure https://192.168.x.x:443/v2.1/nms/version
-    ```
-
-- Check HTTPS upgrade to WebSocket
-    ```
-    curl --insecure --include --no-buffer --header "Connection: Upgrade" --header "Upgrade: websocket" --header "Host: example.com:80" --header "Origin: http://example.com:80" --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" --header "Sec-WebSocket-Version: 13" https://192.168.x.x:443/
-    ```
-  The concrete values of the `--header` parameters do not matter, you can use example.com. Only the last parameter must be the real IP address of UNMS.
-  This should return output similar to the following, indicating that upgrade to WebSocket was successful:
-    ```
-    HTTP/1.1 101 Switching Protocols
-    Upgrade: websocket
-    Connection: Upgrade
-    Sec-WebSocket-Accept: qGHgK3En71di5rrssAZTmtRTyFk=
-  
-  db332780afad264425162cb11d19ffd1ac9ad3658f63cb56968a8a2592054a39aac950bcdae301e39eea75f28c7d3e7dd32a568f0fcf67f25b692434c825ffc7d13b7f8bcec1fb649919d784723f039ef50deb939eeb2b1bd602f56339ac20b65b3
     ```
 
 - Check collision with Docker's virtual subnet
@@ -82,11 +66,29 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
 
 ## I can discover the device but connection to UNMS is failing
 
-- Check traceroute/ping from device to your UNMS server IP / domain name.
+- Check traceroute/ping/curl from device to your UNMS server IP / domain name.
     ```
     ping unms-server.com
     traceroute -n 192.168.x.x
+    curl --insecure https://192.168.x.x:443/v2.1/nms/version
     ```
+
+- Check HTTPS upgrade to WebSocket
+    ```
+    curl --insecure --include --no-buffer --header "Connection: Upgrade" --header "Upgrade: websocket" --header "Host: example.com:80" --header "Origin: http://example.com:80" --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" --header "Sec-WebSocket-Version: 13" https://192.168.x.x:443/
+    ```
+  The values of the `--header` parameters do not matter, you can use example.com as shown. Only the last parameter must be the real address of your UNMS server.
+
+  This should return output similar to the following, indicating that upgrade to WebSocket was successful:
+    ```
+    HTTP/1.1 101 Switching Protocols
+    Upgrade: websocket
+    Connection: Upgrade
+    Sec-WebSocket-Accept: qGHgK3En71di5rrssAZTmtRTyFk=
+  
+  db332780afad264425162cb11d19ffd1ac9ad3658f63cb56968a8a2592054a39aac950bcdae301e39eea75f28c7d3e7dd32a568f0fcf67f25b692434c825ffc7d13b7f8bcec1fb649919d784723f039ef50deb939eeb2b1bd602f56339ac20b65b3
+    ```
+
 
 - Make sure device has correct time and date set
 
