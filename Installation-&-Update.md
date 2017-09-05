@@ -89,7 +89,7 @@ Please note that this may affect containers other than UNMS running on your syst
 
 #### Cloud
 We recommend using the latest version of [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) or Amazon AMI. Here are examples of suitable cloud services:
-- [AWS](https://aws.amazon.com/), EC2 instance, _t2.micro_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
+- [AWS](https://aws.amazon.com/), EC2 instance, _t2.small_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
 - [DigitalOcean](https://www.digitalocean.com), basic droplet (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
 
 _Note: There is a detailed tutorial for DigitalOcean: **[[UNMS on DigitalOcean]]**._
