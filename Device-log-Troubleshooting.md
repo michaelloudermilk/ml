@@ -62,7 +62,7 @@ This error is typically related to this error in UNMS log:
 
      [log,error,ws] data: WS - problem with establishing connection from <ip of site>, unexpected data: Error: Unsupported state or unable to authenticate data)
 
-It has the same solution as [Problem with AES encryption](https://github.com/Ubiquiti-App/UNMS/wiki/Device-log-Troubleshooting#problem-with-aes-encryption). There are more info about it in this [community post](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/EdgeRouter-Pro-fails-to-show-in-console/m-p/2053737#M1001). This problem could have multiple reason but the most probable one is that something replaced device specific UNMS key with universal key. There is a bug ([beta communiety thread](https://community.ubnt.com/t5/airCube-ISP-AC-Beta/Firmware-1-0-2-Web-UI-Issue/m-p/2056059#M530)) in UMobile application which could replace UNMS key.  
+It has the same solution as [Problem with AES encryption](https://github.com/Ubiquiti-App/UNMS/wiki/Device-log-Troubleshooting#problem-with-aes-encryption). There are more info about it in this [community post](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/EdgeRouter-Pro-fails-to-show-in-console/m-p/2053737#M1001). This problem could have multiple reason but the most probable one is that something replaced device specific UNMS key with universal key. There is a bug ([beta community post](https://community.ubnt.com/t5/airCube-ISP-AC-Beta/Firmware-1-0-2-Web-UI-Issue/m-p/2056059#M530)) in UMobile application which could replace device specific UNMS key with universal UNMS key.  
 
 # Connection terminated by UNMS (system info)
 
