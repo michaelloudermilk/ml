@@ -51,6 +51,30 @@ Devices with communication protocol V2 (EdgeRouter 1.9.7.betaX+, airMAX 8.4+):
 4. UNMS accepts this connection and locks communication with this device only to unique UNMS key
 3. User authorises device and UNMS has full access to device
 
+# Connection terminated by UNMS (establishing connection)
+
+Typical example:
+
+     Sep  9 14:25:16 udapi-bridge[3300]: peer closed connection (status 1000): Connection terminated by UNMS while establishing connection.                                                                                      
+     Sep  9 14:25:16 udapi-bridge[3300]: connection closed  
+
+This error is typically related to this error in UNMS log:
+
+     [log,error,ws] data: WS - problem with establishing connection from <ip of site>, unexpected data: Error: Unsupported state or unable to authenticate data)
+
+It has the same solution as [Problem with AES encryption](https://github.com/Ubiquiti-App/UNMS/wiki/Device-log-Troubleshooting#problem-with-aes-encryption). There are more info about it in this [community post](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/EdgeRouter-Pro-fails-to-show-in-console/m-p/2053737#M1001). This problem could have multiple reason but the most probable one is that something replaced device specific UNMS key with universal key. There is a bug ([beta communiety thread](https://community.ubnt.com/t5/airCube-ISP-AC-Beta/Firmware-1-0-2-Web-UI-Issue/m-p/2056059#M530)) in UMobile application which could replace UNMS key.  
+
+# Connection terminated by UNMS (system info)
+
+Typical example:
+
+    Jul 28 22:26:41 dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
+
+This log line means that UNMS can't connect this device. It could mean that its model or FW is not supported or there is a problem with parsing device info. If it happens, please contact us via [UNMS community](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/bd-p/UNMSBeta). We would like to know your device model, FW version and [UNMS logs](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#where-to-find-unms-logs) and output of this command:
+
+     ls /sys/class/net
+
+
 # Problem with a custom reverse proxy
 
 Typical example:
@@ -58,17 +82,6 @@ Typical example:
      Jul 29 11:24:11 udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
     
 Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. See our [example configurations](https://github.com/Ubiquiti-App/UNMS/wiki/Reverse-proxy-examples) for Nginx and Apache.
-
-# UNMS terminates device connection
-
-Typical example:
-
-    Jul 28 22:26:41 dapi-bridge[459]: peer closed connection (status 1000): Connection terminated by UNMS while getting system info.
-
-This log lines mean that UNMS can't connect this device. It could mean that its model or FW is not supported or there is a problem with parsing device info. If it happens, please contact us via [UNMS community](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/bd-p/UNMSBeta). We would like to know your device model, FW version and [UNMS logs](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#where-to-find-unms-logs) and output of this command:
-
-     ls /sys/class/net
-
 
 # UNMS connector can't access local device data
 
