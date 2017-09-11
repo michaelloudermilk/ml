@@ -16,6 +16,7 @@ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/scripts/ge
 
 You can find the `<device-id>` in the URL in UNMS:
 
+![](/images/deviceid.png)
 
 
 
