@@ -51,6 +51,15 @@ Devices with communication protocol V2 (EdgeRouter 1.9.7.betaX+, airMAX 8.4+):
 4. UNMS accepts this connection and locks communication with this device only to unique UNMS key
 3. User authorises device and UNMS has full access to device
 
+# Connection error
+
+Typical example:
+
+     Sep 12 15:20:52 udapi-bridge[978]: connecting to XXX.YYY.ZZZ:443
+     Sep 12 15:20:57 udapi-bridge[978]: connection error (XXX.YYY.ZZZ:443)
+
+This is a generic network error which means that your device can’t reach UNMS server. It is necessary to check that your device can ping your UNMS server and it can connect to UNMS via websocket with SSL. There is a detailed tutorial how to check it on this [wiki page](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#i-can-discover-the-device-but-connection-to-unms-is-failing). If your device is EdgeRouter and you are using it as a gateway then you could have a problem with resolving UNMS hostname and you have to use IP address in your UNMS key.
+
 # Connection terminated by UNMS (establishing connection)
 
 Typical example:
