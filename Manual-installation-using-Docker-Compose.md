@@ -24,6 +24,7 @@ This guide was tested with UNMS 0.8.0. The procedure will likely not work with o
     useradd -m "${UNMS_USER}"
     usermod -aG docker "${UNMS_USER}"
     ```
+    WARNING: the UID of the unms user account must be >=1000. Docker has trouble mapping UIDs lower than 1000 to the user accounts inside containers.
 
 0) Download and unpack the UNMS installation package to `/home/${UNMS_USER}/app`
     ```
