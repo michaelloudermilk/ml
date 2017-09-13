@@ -55,10 +55,27 @@ Devices with communication protocol V2 (EdgeRouter 1.9.7.betaX+, airMAX 8.4+):
 
 Typical example:
 
-     Sep 12 15:20:52 udapi-bridge[978]: connecting to XXX.YYY.ZZZ:443
      Sep 12 15:20:57 udapi-bridge[978]: connection error (XXX.YYY.ZZZ:443)
 
 This is a generic network error which means that your device can’t reach UNMS server. It is necessary to check that your device can ping your UNMS server and it can connect to UNMS via websocket with SSL. There is a detailed tutorial how to check it on this [wiki page](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#i-can-discover-the-device-but-connection-to-unms-is-failing). If your device is EdgeRouter and you are using it as a gateway then you could have a problem with resolving UNMS hostname and you have to use IP address in your UNMS key.
+
+# Connection error with ssl
+
+Typical example:
+
+     Sep  1 16:31:37 udapi-bridge[612]: connection error (XXX.YYY.ZZZ:443): lws_ssl_client_connect2 failed
+
+This log line means that device doesn’t trust UNMS certificate. There could be multiple reasons for this situation:
+* device has a wrong time and it’s necessary to allow NTP service
+* UNMS has a self signed certificate or UNMS certificate is signed by untrusted certificate authority. This is fixed in UNMS 0.9.3+ or you have to add +allowSelfSignedCertificate to your UNMS key in older UNMS instances. 
+
+# Connection error with a custom reverse proxy
+
+Typical example:
+
+     Jul 29 11:24:11 udapi-bridge[790]: connection error (XXX.YYY.ZZZ:443): HS: ACCEPT missing
+    
+Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. See our [example configurations](https://github.com/Ubiquiti-App/UNMS/wiki/Reverse-proxy-examples) for Nginx and Apache.
 
 # Connection terminated by UNMS (establishing connection)
 
@@ -82,15 +99,6 @@ Typical example:
 This log line means that UNMS can't connect this device. It could mean that its model or FW is not supported or there is a problem with parsing device info. If it happens, please contact us via [UNMS community](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/bd-p/UNMSBeta). We would like to know your device model, FW version and [UNMS logs](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#where-to-find-unms-logs) and output of this command:
 
      ls /sys/class/net
-
-
-# Problem with a custom reverse proxy
-
-Typical example:
-
-     Jul 29 11:24:11 udapi-bridge[790]: connection error (localhost:443): HS: ACCEPT missing
-    
-Devices use [WebSocket Secure connection](https://en.wikipedia.org/wiki/WebSocket) aka WSS for communication with UNMS. Therefore you have to configure your proxy to handle websocket communication with TLS properly on its public-https-port. See our [example configurations](https://github.com/Ubiquiti-App/UNMS/wiki/Reverse-proxy-examples) for Nginx and Apache.
 
 # UNMS connector can't access local device data
 
