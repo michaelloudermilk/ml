@@ -124,3 +124,9 @@ Different devices store logs differently
 Logs are stored in `/home/unms/data/logs/` or you can download logs from Web UI from **Settings** -> **Maintenance** -> **Download support info**
 
 You can use a script to generate a package with the latest logs and additional info required to troubleshoot UNMS issues, see [[Generating a support info file via CLI]]
+
+
+## Troubleshooting domain name resolution issues
+
+In some scenarios, Docker will use only the first name server configured on the host system and not move to the next if it fails. https://github.com/moby/moby/issues/20494
+Docker also defaults to 8.8.8.8 if no DNS is configured https://robinwinslow.uk/2016/06/23/fix-docker-networking-dns/
