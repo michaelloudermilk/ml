@@ -104,7 +104,7 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
 
 ## Where to find logs on the device
 
-Different devices store logs differently. You have to log to your device via SSH first and then:
+Different devices store logs differently. You have to log to your device via SSH and then:
 
 ### **EdgeRouter** and **uFiber OLT**
 
@@ -113,7 +113,7 @@ Different devices store logs differently. You have to log to your device via SSH
  
 ### **EdgeSwitch**
 
-Enter into user privilege mode.
+Enter into [user privilege mode](https://dl.ubnt.com/guides/edgemax/EdgeSwitch_CLI_Command_Reference_UG.pdf).
 
     enable
 
