@@ -104,20 +104,26 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
 
 ## Where to find logs on the device
 
-Different devices store logs differently
+Different devices store logs differently. You have to log to your device via SSH first and then:
 
-* **EdgeRouter**, **uFiber OLT**
+### **EdgeRouter** and **uFiber OLT**
 
-    ```.sh
     less /var/log/unms.error
     less /var/log/unms.log
-    ```
+ 
+### **EdgeSwitch**
 
-* **airMAX**
+Enter into user privilege mode.
 
-    ```.sh
+    enable
+
+Find UNMS info in support info
+
+    show tech-support system
+
+### **airMAX**
+
     less /var/log/messages
-    ```
 
 ## Where to find UNMS logs
 
