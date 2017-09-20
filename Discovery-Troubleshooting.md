@@ -117,13 +117,17 @@ Enter into user privilege mode.
 
     enable
 
-Find UNMS info in support info
+Find UNMS info in a support info
 
     show tech-support system
 
 ### **airMAX**
 
     less /var/log/messages
+
+### **airCube**
+
+You can download support info via UI. It's a small blue lifebuoy icon.
 
 ## Where to find UNMS logs
 
