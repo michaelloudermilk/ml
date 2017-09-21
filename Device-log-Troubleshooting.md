@@ -37,6 +37,8 @@ sudo docker exec -u postgres -it unms-postgres psql
 delete from mac_aes_key where mac='44:d9:e7:50:92:89';
 \q
 ```
+3. [Restart UNMS](https://github.com/Ubiquiti-App/UNMS/wiki/Restart)
+
 ### How UNMS keys aka UNMS connection strings works
 
 Devices with communication protocol V1 (EdgeRouter 1.9.1.1-unms up to 1.9.7alphaX, airMAX 8.3.0):
