@@ -94,7 +94,7 @@ Use installation script argument `--version <version>` to install a specific UNM
 Use the `--update` flag to preserve existing UNMS configuration without having to specify all the installation arguments again.
 
 ```sh
-$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --version 0.9.0
+$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --version 0.9.0 --update
 ```
 
 
