@@ -87,6 +87,14 @@ $ sudo bash /tmp/unms_install.sh --subnet 172.45.0.1/24
 You may also wish to change the IP address of the docker0 bridge created by Docker. See https://docs.docker.com/engine/userguide/networking/default_network/custom-docker0/.
 Please note that this may affect containers other than UNMS running on your system.
 
+#### <a name="update"></a> Installing a specific UNMS version (not recommended)
+
+Use installation script argument `--version <version>` to install a specific UNMS version other than the latest official release. This is for testing purposes only. Downgrading to an earlier version will likely corrupt your existing data. Upgrading to a newer `-rc` or `-dev` version before it is officially released can cause errors that will prevent further upgrades.
+```sh
+$ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --version 0.9.0
+```
+
+
 #### Cloud
 We recommend using the latest version of [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) or Amazon AMI. Here are examples of suitable cloud services:
 - [AWS](https://aws.amazon.com/), EC2 instance, _t2.small_ (2 GB RAM), Ubuntu 16.04.1 LTS (Xenial Xerus)
