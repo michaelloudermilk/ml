@@ -90,6 +90,9 @@ Please note that this may affect containers other than UNMS running on your syst
 #### <a name="update"></a> Installing a specific UNMS version (not recommended)
 
 Use installation script argument `--version <version>` to install a specific UNMS version other than the latest official release. This is for testing purposes only. Downgrading to an earlier version will likely corrupt your existing data. Upgrading to a newer `-rc` or `-dev` version before it is officially released can cause errors that will prevent further upgrades.
+
+Use the `--update` flag to preserve existing UNMS configuration without having to specify all the installation arguments again.
+
 ```sh
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh --version 0.9.0
 ```
