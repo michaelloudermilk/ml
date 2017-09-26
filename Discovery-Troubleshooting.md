@@ -54,6 +54,8 @@ The discovery packet is sent using UDP to port 10001, it consists of four bytes 
 
     UNMS also contains installation parameter see [Installation Guide](https://github.com/Ubiquiti-App/UNMS/wiki/Installation-&-Update#-changing-the-unms-containers-ip-address-optional)
 
+- Check with tcpdump that your device receives UDP packet from your UNMS instance and sends back an answer.
+
 - The device might not be supported by UNMS
 
     UNMS currently (2017-06-27, version 0.8.0) supports:
