@@ -124,8 +124,11 @@ Find UNMS info in a support info
     show tech-support system
 
 ### **airMAX**
+Device service syslog has to be allowed.
 
     less /var/log/messages
+
+Or file syslog.txt from device support file.
 
 ### **airCube**
 
