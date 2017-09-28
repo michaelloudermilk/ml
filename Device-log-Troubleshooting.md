@@ -1,3 +1,16 @@
+# Problem with random airMAX disconnection
+
+Typical example:
+
+    Sep 28 03:05:24 udapi-bridge[6838]: mod_airos_on_message: received request with older request in flight
+    Sep 28 03:05:24 udapi-bridge[6838]: mod_airos_on_message: received request with older request in flight
+    Sep 28 03:06:33 udapi-bridge[6838]: reconnecting after 30s of inactivity
+    Sep 28 03:06:33 udapi-bridge[6838]: disconnecting
+    Sep 28 03:06:49 udapi-bridge[6838]: connection closed
+    Sep 28 03:06:49 udapi-bridge[6838]: connecting to XX.YY.ZZ:443
+
+These log lines show that device try to connect to UNMS, but it freeze during connecting. It could happen after UNMS restart, device restart or even randomly. This issue will be fixed in airMAX M FW 6.1.0+ and AC FW 8.4.0+.
+
 # Problem with AES encryption
 
 Typical example:
