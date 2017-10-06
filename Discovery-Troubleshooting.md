@@ -132,7 +132,7 @@ Or file syslog.txt from device support file.
 
 ### **airCube**
 
-You can download support info via UI. It's a small blue lifebuoy icon.
+You can download support info via UI. It's a small blue lifebuoy icon. UNMS logs are included in FW 1.1.0+ (syslog).
 
 ## Where to find UNMS logs
 
