@@ -4,11 +4,19 @@ UNMS sends _discovery packet_ to every IP address in the given range and waits f
 
 The discovery packet is sent using UDP to port 10001, it consists of four bytes `0x1 0x0 0x0 0x0`.
 
-## Blocking Discovery from Outside Networks
+The device only responds to packets sent from private network ranges.
 
-You may wish to block incoming discovery packets to prevent your device from being _discovered_ from the Internet. This can be done using a firewall rule.
+## Blocking The Discovery
 
-### Firewall
+Preventing your device from being _discovered_.
+
+### AirMax
+
+Go to `SETTINGS` -> `Services` -> `Device Discovery` -> set checkbox to `OFF` and click `Save Settings`
+
+### EdgeRouter
+
+Currently this can be done only through the firewall rule:
 
 To setup the rule
 ```
