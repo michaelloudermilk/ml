@@ -1,4 +1,4 @@
-[[ Installation & Update ]]
+[Installation & Update](https://github.com/Ubiquiti-App/UNMS/wiki/Installation-&-Update)
 
 [[ Manual installation using Docker Compose ]]
 
