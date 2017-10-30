@@ -138,6 +138,8 @@ You can download support info via UI. It's a small blue lifebuoy icon. UNMS logs
 
 Logs are stored in `/home/unms/data/logs/` or you can download logs from Web UI from **Settings** -> **Maintenance** -> **Download support info**
 
+UNMS update log is in file `/home/unms/data/update/update.log`.
+
 You can use a script to generate a package with the latest logs and additional info required to troubleshoot UNMS issues, see [[Generating support files via CLI]]
 
 
