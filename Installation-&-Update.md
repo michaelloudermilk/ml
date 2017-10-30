@@ -18,6 +18,14 @@ Run the command below on the host to install and start UNMS (it will automatical
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh
 ```
 
+Additionally, we recommend that you run the following commands on your server as recommended in the [Redis database documentation](https://redis.io/topics/admin):
+```sh
+sysctl vm.overcommit_memory=1
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+```
+These configuration changes are not required to run UNMS, but will prevent [issues](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/UNMS-stopped-working-Harddrive-Full/m-p/2092820) related to insufficient memory. Unfortunately it is not possible to isolate them to a single Docker container.
+
+
 #### <a name="update"></a> Manual update Instructions (optional)
 
 Starting with UNMS version 0.7.14, we have introduced a one-click update option in the UI. When a new version is available, you will be able to install the update by clicking a button in the new version notification dialog or under Settings/Maintenance.
