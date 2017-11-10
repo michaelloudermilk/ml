@@ -18,11 +18,19 @@ Run the command below on the host to install and start UNMS (it will automatical
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh && sudo bash /tmp/unms_install.sh
 ```
 
-Additionally, we recommend that you run the following commands on your server as recommended in the [Redis database documentation](https://redis.io/topics/admin):
+Additionally, we recommend that you make the following changes to your server configuration as recommended in the [Redis database documentation](https://redis.io/topics/admin):
+
+1) set `vm.overcommit_memory` to 1:
 ```sh
-sysctl vm.overcommit_memory=1
+echo "vm.overcommit_memory=1" >>/etc/sysctl.conf
+sysctl -p
+```
+
+2) Disable Transparent HugePages and [update your /etc/rc.local or /etc/grub.conf](https://unix.stackexchange.com/a/99172)  to make the change permanent:
+```sh
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 ```
+
 These configuration changes are not required to run UNMS, but will prevent [issues](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/UNMS-stopped-working-Harddrive-Full/m-p/2092820) related to insufficient memory. Unfortunately it is not possible to isolate them to a single Docker container.
 
 
