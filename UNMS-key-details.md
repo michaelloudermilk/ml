@@ -1,4 +1,3 @@
-UNMS key
 Here is an example of UNMS key
 wss://your.domain.com:443+n9yU137QSwTzBXnF...9Sk0pC7sDKGnpbxiHRI9W+
 
