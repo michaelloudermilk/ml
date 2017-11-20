@@ -74,15 +74,15 @@ Typical example:
 
 This is a generic network error which means that your device can’t reach UNMS server. It is necessary to check that your device can ping your UNMS server and it can connect to UNMS via websocket with SSL. There is a detailed tutorial how to check it on this [wiki page](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery-Troubleshooting#i-can-discover-the-device-but-connection-to-unms-is-failing). If your device is EdgeRouter and you are using it as a gateway then you could have a problem with resolving UNMS hostname and you have to use IP address in your UNMS key.
 
-#Connection error Bad UNMS key
+# Connection error Bad UNMS key
 Typical example:
 
      Nov 15 22:43:17 udapi-bridge[1936]: connection error (XXX.YYY.ZZZ:443): HS: ACCEPT missing
 
 When a device with badly formatted UNMS key try to connect this is the error message it will produce. 
 Wrong format means for example a non standard character in front of the UNMS key string:
-Correct : wss//XXX.YYY.ZZZ:443+...
-Wrong : -wss//XXX.YYY.ZZZ:443+...
+Correct : wss//XXX.YYY.ZZZ:443+...   
+Wrong : -wss//XXX.YYY.ZZZ:443+...   
 There can be many different mistakes in UNMS key so generally when this message appears in log it is necessary 
 to determine which device is causing it and then check that device's UNMS key.
 
