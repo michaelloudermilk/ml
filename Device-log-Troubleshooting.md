@@ -80,7 +80,7 @@ Typical example:
      Nov 15 22:43:17 udapi-bridge[1936]: connection error (XXX.YYY.ZZZ:443): HS: ACCEPT missing
 
 When a device with badly formatted UNMS key try to connect this is the error message it will produce. 
-Wrong format means for example a non standard character in front of the UNMS key string:
+Wrong format means for example a non standard character in front of the UNMS key string:  
 Correct : wss//XXX.YYY.ZZZ:443+...   
 Wrong : -wss//XXX.YYY.ZZZ:443+...   
 There can be many different mistakes in UNMS key so generally when this message appears in log it is necessary 
