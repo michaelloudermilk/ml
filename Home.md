@@ -1,6 +1,6 @@
 [Installation & Update](https://github.com/Ubiquiti-App/UNMS/wiki/Installation-&-Update)
 
-[[ Manual installation using Docker Compose ]]
+<!--- [[ Manual installation using Docker Compose ]] --->
 
 [[ UNMS on DigitalOcean ]]
 
