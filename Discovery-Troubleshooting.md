@@ -12,6 +12,17 @@ UNMS sends _discovery packet_ to every IP address in the given range and waits f
 
 The discovery packet is sent using UDP to port 10001, it consists of four bytes `0x1 0x0 0x0 0x0`.
 
+## Make sure discovery is not disabled on the device
+Many devices allow to turn the discovery off. 
+
+**For AirMax** check the `SETTINGS` -> `Services` -> `Device Discovery`    
+If the checkbox is set to `OFF` change it to `ON` and click `Save Settings`
+
+**For EdgeRouters** you need to check if there is active firewall setting which blocks UDP packets on port 10001.   
+You can find a nice guide [here](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery#edgerouter).
+
+
+
 ## I can't see any devices or some devices are missing
 
 - Check traceroute/ping/curl from your UNMS server to device's IP.
