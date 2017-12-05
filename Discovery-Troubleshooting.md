@@ -18,7 +18,7 @@ Many devices allow to turn the discovery off.
 **For AirMax** check the `SETTINGS` -> `Services` -> `Device Discovery`    
 If the checkbox is set to `OFF` change it to `ON` and click `Save Settings`
 
-**For EdgeRouters** you need to check if there is active firewall setting which blocks UDP packets on port 10001.   
+**For EdgeRouters** you need to check if there is an active firewall record for blocking UDP packets on port 10001.   
 You can find a nice guide [here](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery#edgerouter).
 
 
