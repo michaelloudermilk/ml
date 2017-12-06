@@ -47,7 +47,7 @@ Updating the app will preserve all configuration (custom ports, SSL certificates
 
 #### <a name="ssl"></a> Supplying your own SSL certificate for access via HTTPS (optional)
 By default, UNMS uses [Let's Encrypt](https://letsencrypt.org/) to automatically create and manage an SSL certificate for its domain name. The certificate is saved under ```/home/unms/data/cert```. 
-In case you would like to utilize a different certificate, use installation script arguments `--ssl-cert-dir <DIRECTORY>`, `--ssl-cert <FILENAME>`, `--ssl-cert-key <FILENAME>` and optionally `--ssl-cert-ca <FILENAME>` to tell UNMS where to look for certificate files.
+In case you would like to utilize a different certificate, use installation script arguments `--ssl-cert-dir <DIRECTORY>`, `--ssl-cert <FILENAME>`, `--ssl-cert-key <FILENAME>` and optionally `--ssl-cert-ca <FILENAME>` to tell UNMS where to look for certificate files. _Argument `--ssl-cert-ca <FILENAME>`is temporarily not available in version 0.11.0. It will be fully supported in version 0.11.1+._
 
 ```sh
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh 
