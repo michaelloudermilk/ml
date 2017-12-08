@@ -1,10 +1,11 @@
 ## Supported Firmware Versions
 
-* **EdgeRouter (e50, e100, e200)**: _v1.9.1.1-unms_ or _1.9.7+_
-* **EdgeRouter (e1000)**: _1.9.5_ or _1.9.7+_
-* **uFiber OLT (e600)**: _1.0.0+_
-* **airMAX (AC)**: _8.3.0+_
-* **airMAX (M)**: _6.0.6+_ (alpha)
+* **EdgeRouter**: _1.9.7+_
+* **EdgeSwitch**: _1.7.3+_
+* **uFiber OLT**: _1.0.0+_
+* **airMAX (AC)**: _8.4.1+_
+* **airMAX (M)**: _6.1.3+_ 
+* **airCube**: _1.0.0+_ 
 
 ## Registration with UNMS Discovery
 * Go to UNMS Discovery manager
