@@ -3,7 +3,10 @@ Welcome to the UNMS installation and update guide. UNMS can be deployed as a doc
 ## Linux
 
 #### Prerequisites
-- Supported Distros: [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) 64-bit and [Debian 9](https://www.debian.org/releases/stable/) 64-bit
+- Supported Distros: 
+  - [Ubuntu 16.04.1 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/) 64-bit
+  - [Debian 9](https://www.debian.org/releases/stable/) 64-bit
+  - Debian 8 64-bit with [Docker 17.10.0](https://community.ubnt.com/t5/UNMS-Ubiquiti-Network-Management/UNMS-install-on-Debian-failed-Service-fluentd-failed-to-build/m-p/2146605/highlight/true#M2402)
 - 2 GB RAM (Minimal)
 - 16 GB storage (Minimal)
 - 64-bit (x64) CPU
