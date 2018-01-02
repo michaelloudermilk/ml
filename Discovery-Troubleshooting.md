@@ -132,7 +132,7 @@ Enter into [user privilege mode](https://dl.ubnt.com/guides/edgemax/EdgeSwitch_C
 
 Find UNMS info in a support info
 
-    show tech-support system
+    show unms log
 
 ### **airMAX**
 Device service syslog has to be allowed.
