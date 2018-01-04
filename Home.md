@@ -16,4 +16,6 @@
 
 [[ Password Recovery ]]
 
+[[ UNMS scripts ]]
+
 [[ Uninstall guide ]]
