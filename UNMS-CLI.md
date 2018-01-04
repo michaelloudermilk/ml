@@ -1,3 +1,5 @@
+## Restart
+
 Use the following command to rebuild all UNMS docker containers. Run as a user with `sudo` enabled.
 
     sudo ~unms/app/unms-cli restart
