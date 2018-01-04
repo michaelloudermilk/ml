@@ -1,4 +1,4 @@
-## Generating support files via CLI
+## Generating support files
 
 Use the following script to generate a .tar.gz file with the latest logs and all info that will help us troubleshoot issues with your UNMS installation.
 
