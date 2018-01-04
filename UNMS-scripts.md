@@ -16,9 +16,6 @@ Use the following script to generate a .tar.gz file with all statistics associat
 curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/scripts/get-statistics.sh | sudo bash -s -- <device-id>
 ```
 
-You can find the `<device-id>` in the URL in UNMS:
-
-[[/images/deviceid.png|finding device ID]]
-
+You can find the `<device-id>` in the URL in UNMS.
 
 
