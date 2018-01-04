@@ -10,11 +10,11 @@
 
 [[ Discovery Troubleshooting ]]
 
-[[ Restart ]]
-
 [[ Data backup ]]
 
 [[ Password Recovery ]]
+
+[[ UNMS CLI ]]
 
 [[ UNMS scripts ]]
 
