@@ -44,12 +44,12 @@ This guide was tested with UNMS 0.8.0. The procedure will likely not work with o
     export PUBLIC_HTTPS_PORT=443             # Port where UNMS UI is exposed to users
     export PUBLIC_WS_PORT=443                # Port where UNMS is exposed to devices
     export BEHIND_REVERSE_PROXY=false        # true if running behind a reverse proxy
+    export SSL_CERT_DIR=                     # SSL cert directory (optional)
     export SSL_CERT=                         # SSL cert filename (optional)
     export SSL_CERT_KEY=                     # SSL cert key filename (optional)
     export SSL_CERT_CA=                      # SSL cert CA filename (optional)
-    export INTERNAL_HTTP_PORT=8080
-    export INTERNAL_HTTPS_PORT=8443
-    export INTERNAL_WS_PORT=8443
+    export UNMS_HTTP_PORT=8080
+    export UNMS_HTTPS_PORT=8443
     export WS_PORT_MAPPING=
     export DOCKER_IMAGE=ubnt/unms
     export BRANCH=master
@@ -59,6 +59,8 @@ This guide was tested with UNMS 0.8.0. The procedure will likely not work with o
     export PROD=true
     export DEMO=false
     export HOST_TAG=
+    export CERT_DIR_MAPPING_NGINX=${DATA_DIR}/cert:/cert
+    export USERCERT_DIR_MAPPING_NGINX=       # set to "${SSL_CERT_DIR}/cert:/usercert" if you have a custom SSL cert
 
     cd /home/${UNMS_USER}/app 
     envsubst < docker-compose.yml.template > docker-compose.yml
