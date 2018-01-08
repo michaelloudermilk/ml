@@ -2,7 +2,7 @@
 
 **This guide is very preliminary and has had minimal testing. Use at your own risk.**
 
-This guide is intended only for those who need to install UNMS on a system that runs Docker, but CANNOT run the official installation scripts. Most users should follow instructions at [[ Installation-&-Update ]].
+This guide is intended only for those who need to install UNMS on a system that runs Docker, but CANNOT run the official installation scripts. Most users should follow instructions at [Installation & Update](../Installation-&-Update).
 
 This installation guide references tools like `useradd`, `usermod`, `curl` and `envsubst`. You may need to substitute alternative tools available on your system.
 
