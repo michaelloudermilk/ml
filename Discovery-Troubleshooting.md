@@ -8,22 +8,17 @@
 
 ## How The Discovery Works
 
-UNMS sends _discovery packet_ to every IP address in the given range and waits for device reply. The device sends back basic information shown in the Discovery Manager - name, SSID, model, firmware version, mac address and list of all interfaces.
-
-The discovery packet is sent using UDP to port 10001, it consists of four bytes `0x1 0x0 0x0 0x0`.
-
-## Make sure discovery is not disabled on the device
-Many devices allow to turn the discovery off. 
-
-**For AirMax** check the `SETTINGS` -> `Services` -> `Device Discovery`    
-If the checkbox is set to `OFF` change it to `ON` and click `Save Settings`
-
-**For EdgeRouters** you need to check if there is an active firewall record for blocking UDP packets on port 10001.   
-You can find a nice guide [here](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery#edgerouter).
-
-
+UNMS sends _discovery packet_ to every IP address in the given range and waits for device reply. The device sends back basic information shown in the Discovery Manager - _name_, _SSID_, _model_, _firmware version_, _mac address_ and list of all _interfaces_. The discovery packet is sent using UDP to port 10001, it consists of four bytes `0x1 0x0 0x0 0x0`.
 
 ## I can't see any devices or some devices are missing
+
+- Known issues
+    * There is a limited number of UDP connections which can be opened from UNMS private docker network. It's possible that thanks to it you will not see all devices in your network. We will introduce support for discovery over TCP and not only via UDP. This will improve discovery results in UNMS 0.12.0+. But it will not help in all cases because not all devices and FW versions are listening for TCP connections (for example ToughSwitches). There is a workaround for current UDP discovery with searching only small, for example 24 subnets and waiting a minute between searches.
+   * It's not possible to find devices from cloud UNMS instances. Therefore UNMS 0.12.0+ will be able to search not connected devices thanks to already connected devices in UNMS. You can add one device via UNMS mobile app or add it manually and other devices will automatically pop up in UNMS thanks to this device or devices. This will help with previous issue as well.  
+
+- Check that discovery is enabled because many devices allow to turn the discovery off: 
+   * **AirMax** - check the `SETTINGS` -> `Services` -> `Device Discovery`. If the checkbox is set to `OFF` change it to `ON` and click `Save Settings`.
+   * **EdgeRouters** - check the `SETTINGS` -> `System` -> ` UBNT Discovery`. If the checkbox is set to `OFF` change it to `ON` and click `Save`. Plus you need to check if there isn't an active firewall record for blocking UDP packets on port 10001. You can find a nice guide [here](https://github.com/Ubiquiti-App/UNMS/wiki/Discovery#edgerouter).
 
 - Check traceroute/ping/curl from your UNMS server to device's IP.
     ```
@@ -67,15 +62,20 @@ You can find a nice guide [here](https://github.com/Ubiquiti-App/UNMS/wiki/Disco
 
 - Check with tcpdump that your device receives UDP packet from your UNMS instance and sends back an answer.
 
-- The device might not be supported by UNMS
+- Only 24 ranges are allowed for public IP addresses
 
-    UNMS currently (2017-06-27, version 0.8.0) supports:
+- The device might not be supported by UNMS. Discovery should be able to find following devices (all FW versions):
 
-    * **EdgeRouter (e50, e100, e200) - FW 1.9.1.1-unms, FW 1.9.7+**
-    * **EdgeRouter (e1000) - FW 1.9.5+**
-    * **uFiber OLT (e600) - FW 1.0.0+**
-    * **airMAX (AC) - FW 8.3+**
-    * **airMAX (M) - FW 6.0.6-alpha-unms, FW 6.0.7+**
+    UNMS 0.11.1+ supports:
+    * EdgeRouter - device will be updated at least to FW version 1.9.7-hotfix4 during connection via discovery
+    * EdgeSwitch - UNMS discovery can update only FW 1.4.0+, it will be updated to 1.7.3
+    * uFiber OLT - any FW is supported by UNMS
+    * airMAX (AC/M) - device will be updated at least to FW version 6.1.3 for airMAX M and 8.4.3 for airMAX AC
+    * AirCube - any FW is supported by UNMS
+
+   UNMS 0.12.x+ will support:
+    * airFiber - it will not be possible to connect all of them in 0.12.0 to UNMS
+    * ToughSwitch - device will be updated to FW 1.4.0
 
 ## I can discover the device but connection to UNMS is failing
 
@@ -109,15 +109,11 @@ You can find a nice guide [here](https://github.com/Ubiquiti-App/UNMS/wiki/Disco
 
 - If the device has been connected previously try refreshing it's UNMS key
 
-    Click **_Refresh_** on the device row in devices table.
-
-- AirMax/AirCube devices are connected through https port 443
-
-    Currently (2017-06-27, version 0.8.0) there is no option to change the port. It will be added in the next release.
+    Click **_Refresh_** on the device row in devices table. If it doesn't help you should manually paste universal UNMS key via device UI.
 
 ## Where to find logs on the device
 
-Different devices store logs differently. You have to log to your device via SSH and then:
+Different devices store logs differently. The first option is to download support file which includes logs via device UI or you have to log to your device via SSH and then:
 
 ### **EdgeRouter** and **uFiber OLT**
 
@@ -150,9 +146,6 @@ You can download support info via UI. It's a small blue lifebuoy icon. UNMS logs
 Logs are stored in `/home/unms/data/logs/` or you can download logs from Web UI from **Settings** -> **Maintenance** -> **Download support info**
 
 UNMS update log is in file `/home/unms/data/update/update.log`
-
-You can use a script to generate a package with the latest logs and additional info required to troubleshoot UNMS issues, see [[Generating support files via CLI]]
-
 
 ## Troubleshooting domain name resolution issues
 
