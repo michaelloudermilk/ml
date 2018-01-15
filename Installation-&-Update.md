@@ -83,13 +83,13 @@ $ sudo bash /tmp/unms_install.sh --ws-port 8444
 ```
 
 #### <a name="rproxy"></a> Running UNMS behind a reverse proxy (optional)
-Use installation script arguments `--behind-reverse-proxy`, `--public-https-port <NUMBER>` and `--public-ws-port <NUMBER>` if you plan to run UNMS behind a reverse proxy server. 
+Use installation script arguments `--public-https-port <NUMBER>` and `--public-ws-port <NUMBER>` if you plan to run UNMS behind a reverse proxy server. 
 Setting `--public-https-port` is only necessary if the proxy listens for HTTPS on a different port than UNMS.
 Setting `--public-ws-port` is only necessary when you use <a href="#ws-port">`--ws-port`</a> to separate the inform port form the HTTPS port.
 
 ```sh
 $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh
-$ sudo bash /tmp/unms_install.sh --behind-reverse-proxy --public-https-port 443 --http-port 8080 --https-port 8443 
+$ sudo bash /tmp/unms_install.sh --public-https-port 443 --http-port 8080 --https-port 8443 
 ```
 
 Please be aware that this puts the responsibility of managing an SSL certificate on the reverse proxy and disables the automatic certificate management via Let's Encrypt. The reverse proxy must still use HTTPS for communication with UNMS, optionally with a [custom SSL certificate](#ssl). HTTP-only comunication between UNMS and the reverse proxy is not supported.
