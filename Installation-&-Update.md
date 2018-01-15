@@ -136,7 +136,7 @@ Ping must be allowed to the UNMS Host for this to properly work.
 Run the following command on your Ubuntu or Debian system to ensure that all required tools are installed:
 ```
 sudo apt-get update
-sudo apt-get install curl sudo bash netcat
+sudo apt-get install curl sudo bash
 ```
 
 
