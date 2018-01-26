@@ -1,7 +1,7 @@
 ## UNMS installation parameters:
 
     $ curl -fsSL https://raw.githubusercontent.com/Ubiquiti-App/UNMS/master/install.sh > /tmp/unms_install.sh
-    $ sudo bash /tmp/unms_install.sh --behind-reverse-proxy --public-https-port 443 --http-port 8080 --https-port 8443 
+    $ sudo bash /tmp/unms_install.sh --public-https-port 443 --http-port 8080 --https-port 8443 
 
 ## Nginx config
 
