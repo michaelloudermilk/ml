@@ -12,12 +12,13 @@ For data backup, you must first pause the running containers. Go to the director
     cd /home/unms
 
     #pause running containers
-    docker-compose pause
+    sudo ~unms/app/unms-cli stop
 
     # pack the data directory
     sudo tar -cvjSf unms-data.tar.bz2 data
 
     # unpause running containers
-    docker-compose unpause
+    sudo ~unms/app/unms-cli start
+
 
 This set of commands will create an archive for all UNMS settings and data. Then you can move it to another machine or archive.
